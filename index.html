@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header>
+
+        <h1>
+            Graficador de Trayectorias Solares
+        </h1>
+        
+        <h2>
+            Ingresá las coordenadas del Sol para graficar su trayectoria
+        </h2>
+
+    </header>
+
+    <div id="grafico"> <!-- Izquierda --> <!-- NOTA: RETOCADO POR PRUEBA DE ARRAYS-->
+        <p id="valores">
+            <h1 id="textoAltura">
+            </h1>
+            <br>
+            <h1 id="textoAcimut">
+            </h1>
+        </p>
+    </div>
+
+    <div id="botonera"> <!-- Derecha -->
+
+        <label for="altura">
+            Ingrese la Altura del Sol en grados decimales:
+        </label>
+
+        <br>
+
+        <input type="text" id="altura" name="altura" required  maxlength="20" size="10">
+        
+        <br>
+        <br>
+        
+        <label for="acimut">Ingrese el acimut del Sol en grados decimales:</label>
+
+        <br>
+
+        <!-- <input type="text" id="acimut" name="acimut" required  maxlength="20" size="10"> -->
+
+        <input type="text" id="acimut"> <!-- onchange="modificarDiv()" -->
+
+
+        <br>
+        <br>
+
+
+        <button type="button" id="ingresar" name="ingresar" onclick="modificarTexto()"> <!-- onclick="modificarDiv()" -->
+            Ingresar DATOS
+        </button>
+        
+
+        <br>
+        <br>
+
+        
+        <div id="botonDescargar">
+            <button id="descargar" name="descargar">Descargar</button>
+        </div>
+        
+    </div>
+
+
+    <footer>
+
+        <p>
+            Aca iría algo... si tuviese que poner!!!
+            <img src="img/padrinosMagicos.jpg" alt="">
+        </p>
+
+    </footer>
+
+        <!------------------------------------ SCRIPT -------------------------------------->
+<script> 
+
+    // let ingresar = document.getElementById("ingresar")
+    // ingresar.addEventListener("click", function(){
+    //     let entrada = document.getElementById(acimut)
+    //     // alert(entrada)
+    // })
+
+
+
+// --------------------------------- ESCRITURA FUNCIONAL DE UN VALOR DE ACIMUT Y UNO DE ALTURA ---------------------------------
+    // function llamarAlert() {
+    //     const n = document.getElementById("acimut")
+    //     alert("Toma tu número, gil: " + n.value)
+    // }
+    
+    // function modificarDiv() { 
+    //
+    //     const b = document.getElementById("altura")
+    //     const n = document.getElementById("acimut")
+    //     let texto = document.getElementById("valores")
+    //     texto.innerHTML = "Tu acimut es: " + n.value + "<br/>" + "Tu altura es: " + b.value
+    //
+    // }
+
+    // let btn = document.getElementById("ingresar")
+    // btn.addEventListener('click', llamarAlert())
+// --------------------------------- ESCRITURA FUNCIONAL DE UN VALOR DE ACIMUT Y UNO DE ALTURA ---------------------------------
+
+
+
+        
+        //let textoPantalla = document.getElementById("valores")
+
+        let arrayAcimut = Array();
+        let arrayAltura = Array();
+
+        function modificarTexto() {
+
+            
+            let acimut = document.getElementById("acimut");
+            let altura = document.getElementById("altura");
+            let textoAcimut = document.getElementById("textoAcimut");
+            let textoAltura = document.getElementById("textoAltura");
+
+
+            arrayAcimut.push(acimut.value);
+            arrayAltura.push(altura.value);
+
+            
+            textoAcimut.innerHTML = "Valores de acimut ingresados: " + arrayAcimut.join(", ");
+            textoAltura.innerHTML = "Valores de altura ingresados: " + arrayAltura.join(", ");
+
+        }
+
+
+
+
+
+
+</script> <!------------------------------------ SCRIPT -------------------------------------->
+
+
+
+
+</body>
+
+</html>

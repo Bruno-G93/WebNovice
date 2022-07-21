@@ -1,0 +1,70 @@
+
+header{
+    width: 93.5%;
+    background-color: yellow;
+
+    text-align:center;
+
+    border:solid;
+    border-width: 2px;
+    border-radius: 10px;
+
+    margin: 1%;
+    padding: 10px;
+}
+
+body{
+    background-image: url("../img/fonditoCeleste.png");
+}
+
+#grafico{
+    width: 45%;
+    display: inline-block;
+    float: left;
+
+    border:solid;
+    border-width: 2px;
+    border-radius: 10px;
+
+    margin: 1%;
+    padding: 10px;
+}
+
+#botonera{
+    background-color: rgba(255,255,255,0.6);
+    width: 45%;
+    
+    float: left;
+
+    border:solid;
+    border-width: 2px;
+    border-radius: 10px;
+
+    margin: 1%;
+    padding: 10px;
+}
+
+#botonDescargar{
+    text-align: center;
+    margin-top: 100px;
+}
+
+footer{
+    /* display: inline; */
+    float: left;
+    width: 93.5%;
+    background-color: rgba(255,255,255,0.6);
+
+    text-align:center;
+
+    border:solid;
+    border-width: 2px;
+    border-radius: 10px;
+
+    margin: 1%;
+    padding: 10px;
+}
+
+footer img{
+    width: 200px;
+}
